@@ -49,8 +49,9 @@
         <div class="markdown-body">
           {{ content }}
         </div>
-
+        
         {% if is_post %}{% include signoff.html %}{% endif %}
+        {% if site.disqus.shortname %} {% include disqus_comments.html %} {% endif %} 
       </main>
       {% if is_post %}{% include pagination.html %}{% endif %}
     </div>

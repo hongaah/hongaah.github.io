@@ -1,0 +1,18 @@
+{% if page.comments != false %}
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = "https://hongaah.github.io/{{page.url}}"; // <--- 修改成你的博客地址
+this.page.identifier = "https://hongaah.github.io/{{page.url}}";
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '// booox.disqus.com/embed.js'; // <--- 修改成你的 disqus 站点缩写名
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+{% endif %}
