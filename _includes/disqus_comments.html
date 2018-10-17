@@ -2,13 +2,13 @@
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
-this.page.url = "https://hongaah.github.io/{{page.url}}"; // <--- 修改成你的博客地址
+this.page.url = "https://hongaah.github.io{{page.url}}"; // <--- 修改成你的博客地址
 this.page.identifier = "https://hongaah.github.io/{{page.url}}";
 };
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
 
-s.src = '// hongaah.disqus.com/embed.js'; // <--- 修改成你的 disqus 站点缩写名
+s.src = 'https://hongaah.disqus.com/embed.js'; // <--- 修改成你的 disqus 站点缩写名
 
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
