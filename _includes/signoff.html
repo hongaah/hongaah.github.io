@@ -1,11 +1,6 @@
 <p class="mt4">
   Til next time,<br>
-  {{ site.signoff }}
-  <span class="silver">{{ page.date | date: "at %H:%M" }}</span>
+  Hazel <span class="silver">{{ page.date | date: "at %H:%M" }}</span>
 </p>
 <img src="{{ site.url }}/images/scribble3.png" alt="scribble" />
 <br/><br/><br/><br/><br/><hr/>
-<div>
-{% if site.disqus.shortname %}
-  {% include disqus_comments.html %}
-{% endif %}
