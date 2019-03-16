@@ -4,7 +4,14 @@
   <head>
     <meta content='{{ page.title }} - {{ site.title }}' name='title' />
     <meta content='{{ page.title }} - {{ site.title }}' name='og:title' />
-    <title>{{ page.title }} - {{ site.title }}</title>
+    {%- if page.title -%}
+      <title>{{ page.title }} - {{ site.title }}</title>
+    {% else %}
+      <title>{{ site.title }}</title>
+    {%- endif -%}
+
+
+
     {% include head.html %}
   </head>
 
@@ -17,7 +24,7 @@
       </a>
       <p>{{ site.title }}</p>
     </header>
-    
+
     <div class="mw7 bg-white mt4 mb3 center br2-ns bt bb ba-ns b--light-gray">
       <nav class="bb b--light-gray pv4 tc" aria-label="Main">
         {% for link in site.links %}
@@ -49,7 +56,7 @@
         <div class="markdown-body">
           {{ content }}
         </div>
-        
+
         {% if is_post %}{% include signoff.html %}{% endif %}
         {% if site.disqus.shortname %}{% include disqus_comments.html %}{% endif %}
       </main>
